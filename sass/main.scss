@@ -24,11 +24,12 @@ body{
     @include flex-box(column, flex-start, flex-start);
     font-size: 1rem;
     font-family: 'Open Sans', sans-serif; 
+    // background-color: orange;
 }
 
 header{
     width: 100%;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     @include flex-box(row, space-between, center);
     padding: 65px 5px 60px 90px;
 }
@@ -49,8 +50,8 @@ header{
 #files-flexContainer{
     width: 100%;
     @include flex-box(row, space-around, center);
-    padding: 25px 15px 10px 15px;
-    border: 1px solid black;
+    padding: 25px 15px 180px 15px;
+    /* border: 1px solid black; */
 }
 .content-1{
     @include flex-box(column, space-between, space-between);
@@ -76,7 +77,7 @@ header{
 .email{
     padding: 15px 0px 15px 0px;
     #email{
-        border: 1px solid blue;
+        border: 2px solid blue;
         padding: 13px 140px 13px 15px;
         border-radius: 4px;
     }
@@ -98,5 +99,229 @@ header{
     width: 50%;
     height: auto;
     margin: 0px 10px 0px 0px;
+}
+#productive-container{
+    width: 100%;
+    @include flex-box(row, space-around, center);
+    padding: 100px 0px 110px 50px;
     /* border: 1px solid black; */
+    background: hsl(240, 75%, 98%);
+}
+
+.content-2{
+    width: 50%;
+    height: auto;
+    /* border: 1px solid black; */
+    
+    h2{
+        font-size: 2.75rem;
+        font-family: 'Raleway', sans-serif;
+        font-weight: 700;
+        margin: 0px 0px 30px 0px;
+    }
+    p{
+        font-size: 18px;
+        font-family: 'Open Sans', sans-serif;
+        color:  hsl(243, 87%, 12%);
+        line-height: 1.5;
+        margin: 0px 120px 15px 0px;
+    }
+    a{
+        @include flex-box(row, flex-start, center);
+        font-size: 19px;
+        margin: 0px 0px 50px 0px;
+        text-decoration: underline;
+        color: hsl(170, 45%, 43%);
+
+        img{
+            margin: 0px 0px 0px 5px;
+        }
+    }
+}
+
+#card{
+    /* border: 1px solid black; */
+    width: 390px;
+    height: 240px;
+    padding: 35px 40px 20px 40px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 2px 0px 11px rgba(0, 0, 0, 0.5);
+    img{
+        width: 5.5%;
+    }
+    .fylop{
+        font-size: 15px;
+        margin: 10px 0px 7px 0px;
+        line-height: 1.6;
+    }
+}
+
+#profile{
+    @include flex-box(row, space-between,center);
+    img{
+        width: 11%;
+        border-radius: 100%;
+    }
+}
+.details{
+    @include flex-box(column,flex-end,flex-start);
+    position: relative;
+    top: 7px;
+    right: 35px;
+    h3{
+        font-size: 0.75rem;
+        font-weight: bold;
+    }
+    .founder{
+        font-size: 10px;
+    }
+}
+
+.imgBox2{
+    margin: -45px 0px 0px 0px;
+    width: 40%;
+    height: auto;
+    /* border: 1px solid black; */
+}
+
+#access-today{
+    @include flex-box(row, space-between, center);
+    background :hsl(238, 22%, 44%);
+    padding: 110px 60px 80px 85px;
+    width: 100%;
+}
+
+.content-3{
+    @include flex-box(column, flex-start, baseline);
+    width: 50%;
+    height: auto;
+    /* border: 1px solid black; */
+    padding: 0px 80px 20px 0px;
+    h4{
+        font-size: 2.2rem;
+        font-weight: 600;
+        color: white;
+        font-family: 'Raleway', sans-serif; ;
+        margin: 0px 0px 15px 0px;
+    }
+    p{
+        font-size: 1.2rem;
+        color: white;
+        opacity: 0.8;
+        line-height: 1.4;
+    }
+}
+.email-2{
+    @include flex-box(column, flex-start, baseline);
+    /* border: 1px solid black; */
+    #email-2{
+        border: 2px solid blue;
+        padding: 14px 320px 14px 15px;
+        border-radius: 4px;
+        box-shadow: 2px 0px 11px rgba(0, 0, 0, 0.5);
+    }
+    a{
+        padding: 15px 40px 15px 40px;
+        margin: 15px 0px 20px 0px;
+        color: white;
+        background: hsl(224, 93%, 58%);
+        text-align: center;
+        text-decoration: none;
+        font-size: 15px;
+        font-weight: 600;
+        border-radius: 5px;
+        box-shadow: 2px 0px 11px rgba(0, 0, 0, 0.5);
+    }
+}
+
+footer{
+    width: 100%;
+    @include flex-box(column, flex-start, flex-start);
+    padding: 115px 50px 60px 50px;
+    background: hsl(243, 87%, 12%);
+}
+
+#head{
+    img{
+        filter:  brightness(0) invert(1);
+        width: 100%;
+        margin: 0px 0px 24px 35px;
+    }
+}
+#footer-container{
+    width: 100%;
+    /* border: 1px solid white; */
+    @include flex-box(row, space-between, flex-start);
+}
+
+.contact{
+    @include flex-box(column, flex-start, flex-start);
+/*     border: 1px solid white; */
+    margin: 0px 0px 10px 35px;
+}
+
+.contact-Us, .mail{
+    @include flex-box(row, center, center);
+    padding: 0px 0px 17px 0px;
+    a{
+        img{
+            padding: 0px 22px 0px 5px;
+        }
+    }
+    p{
+        font-size: 18px;
+        color: white;
+    }
+}
+
+#links{
+    /* border: 1px solid black; */
+    @include flex-box(row, space-between, flex-start);
+    position: relative;
+    right: 40px;
+}
+
+.link-1{
+    /* border: 1px solid white; */
+    @include flex-box(column, space-between, baseline);
+    a{
+        color: white;
+        text-decoration: none;
+        padding: 0px 5px 17px 0px;
+        font-size: 17px;
+        /* border: 1px solid white; */
+        width: 100%;
+        position: relative;
+        right: 115px;
+    }
+}
+
+.link-2{
+/*     border: 1px solid white; */
+    @include flex-box(column, space-between, baseline);
+    a{
+        color: white;
+        text-decoration: none;
+        padding: 0px 5px 17px 0px;
+        /* border: 1px solid white; */
+        width: 100%;
+        font-size: 17px;
+        position: relative;
+        left: 105px;
+    }
+}
+
+#social{
+    @include flex-box(row, space-around, center);
+    /* border: 1px solid white; */
+    position: relative;
+    right: 150px;
+    a{
+        padding: 5px 10px 5px 5px;
+        img{
+            filter:  brightness(0) invert(1);
+            width: 40px;
+        }
+    }
 }
