@@ -29,7 +29,6 @@ body{
 
 header{
     width: 100%;
-    /* border: 1px solid black; */
     @include flex-box(row, space-between, center);
     padding: 65px 5px 60px 90px;
 }
@@ -51,7 +50,6 @@ header{
     width: 100%;
     @include flex-box(row, space-around, center);
     padding: 25px 15px 180px 15px;
-    /* border: 1px solid black; */
 }
 .content-1{
     @include flex-box(column, space-between, space-between);
@@ -100,26 +98,32 @@ header{
     height: auto;
     margin: 0px 10px 0px 0px;
 }
+
+#curved{
+    width: 100%;
+    background: url(../images/bg-curve-desktop.svg) no-repeat;
+    background-size: cover;
+    background-position: top center;
+    min-width: 10vw;
+    min-height: 12vh;
+}
 #productive-container{
     width: 100%;
     @include flex-box(row, space-around, center);
     padding: 100px 0px 110px 50px;
-    /* border: 1px solid black; */
     background: hsl(240, 75%, 98%);
 }
 
 .content-2{
     width: 50%;
     height: auto;
-    /* border: 1px solid black; */
-    
     h2{
         font-size: 2.75rem;
         font-family: 'Raleway', sans-serif;
         font-weight: 700;
         margin: 0px 0px 30px 0px;
     }
-    p{
+    .para{
         font-size: 18px;
         font-family: 'Open Sans', sans-serif;
         color:  hsl(243, 87%, 12%);
@@ -151,8 +155,8 @@ header{
         width: 5.5%;
     }
     .fylop{
-        font-size: 15px;
-        margin: 10px 0px 7px 0px;
+        font-size: 14px;
+        margin: 10px 0px 17px 0px;
         line-height: 1.6;
     }
 }
@@ -167,8 +171,8 @@ header{
 .details{
     @include flex-box(column,flex-end,flex-start);
     position: relative;
-    top: 7px;
-    right: 35px;
+    top: 0px;
+    right: 150px;
     h3{
         font-size: 0.75rem;
         font-weight: bold;
@@ -182,7 +186,6 @@ header{
     margin: -45px 0px 0px 0px;
     width: 40%;
     height: auto;
-    /* border: 1px solid black; */
 }
 
 #access-today{
@@ -196,7 +199,6 @@ header{
     @include flex-box(column, flex-start, baseline);
     width: 50%;
     height: auto;
-    /* border: 1px solid black; */
     padding: 0px 80px 20px 0px;
     h4{
         font-size: 2.2rem;
@@ -214,7 +216,6 @@ header{
 }
 .email-2{
     @include flex-box(column, flex-start, baseline);
-    /* border: 1px solid black; */
     #email-2{
         border: 2px solid blue;
         padding: 14px 320px 14px 15px;
@@ -251,13 +252,11 @@ footer{
 }
 #footer-container{
     width: 100%;
-    /* border: 1px solid white; */
     @include flex-box(row, space-between, flex-start);
 }
 
 .contact{
     @include flex-box(column, flex-start, flex-start);
-/*     border: 1px solid white; */
     margin: 0px 0px 10px 35px;
 }
 
@@ -276,21 +275,18 @@ footer{
 }
 
 #links{
-    /* border: 1px solid black; */
     @include flex-box(row, space-between, flex-start);
     position: relative;
     right: 40px;
 }
 
 .link-1{
-    /* border: 1px solid white; */
     @include flex-box(column, space-between, baseline);
     a{
         color: white;
         text-decoration: none;
         padding: 0px 5px 17px 0px;
         font-size: 17px;
-        /* border: 1px solid white; */
         width: 100%;
         position: relative;
         right: 115px;
@@ -298,13 +294,11 @@ footer{
 }
 
 .link-2{
-/*     border: 1px solid white; */
     @include flex-box(column, space-between, baseline);
     a{
         color: white;
         text-decoration: none;
         padding: 0px 5px 17px 0px;
-        /* border: 1px solid white; */
         width: 100%;
         font-size: 17px;
         position: relative;
@@ -314,7 +308,6 @@ footer{
 
 #social{
     @include flex-box(row, space-around, center);
-    /* border: 1px solid white; */
     position: relative;
     right: 150px;
     a{
@@ -325,3 +318,200 @@ footer{
         }
     }
 }
+
+@media screen and (max-width: 1390px) {
+    header{
+        padding: 60px 20px 60px 80px;
+        transition: 00.3s;
+    }
+    #head{
+        margin: 0px 0px 20px 0px;
+        transition: 0.3s;
+    }
+    #files-flexContainer{
+        transition: 0.4s;
+        padding: 80px 50px 40px 0px;
+    }
+    .email{
+        @include flex-box(column, flex-start, flex-start);
+        transition: 0.3s;
+        #email{
+            margin: 0px 0px 10px 0px;
+            transition: 0.3s;
+        }
+        a{
+            align-self: flex-start;
+            margin: 10px 0px 15px 0px;
+        }
+    }
+    footer{
+        padding: 100px 10px 100px 10px;
+    }
+    #footer-container{
+        @include flex-box(column, flex-start, flex-start);
+        transition: 0.3s;
+    }
+
+    #links{
+        @include flex-box(column, center, center);
+        position: relative;
+        right: 0px;
+        transition: 0.3s;
+
+        .link-1{
+            margin: 20px 0px 30px 0px;
+            transition: 0.3s;
+            a{
+                right: -35px;
+            }
+        }
+        .link-2{
+            margin: 0px 0px 50px 0px;
+            transition: 0.3s;
+            a{
+                left: 39px;
+            }
+        }
+    }
+    #social{
+        width: 100%;
+        @include flex-box(row, center, center);
+        transition: 0.3s;
+        right: 0px;
+        a{
+            padding: 0px 20px 0px 0px
+        }
+    }
+}
+
+@media all and (max-width: 1150px) {
+    header{
+        padding-left: 30px;
+        padding-right: 10px;
+    }
+    #files-flexContainer{
+        @include flex-box(column-reverse, center, center);
+        padding: 0px 0px 50px 0px;
+        width: 100%;
+        /* border: 1px solid black; */
+        transition: 0.3s;
+    }
+    .email{
+        padding: 10px 20px 10px 20px;
+        #email{
+            width: 100%;
+        }
+        a{
+            width: 100%;
+        }
+    }
+    .content-1{
+        @include flex-box(column, center, center);
+        /* border: 1px solid black; */
+        width: 100%;
+        margin: 25px auto;
+
+        h1{
+            text-align: center;
+            width: 100%;
+        }
+        p{
+            padding: 10px 20px 10px 20px;
+            text-align: center;
+            width: 100%;
+            /* border: 1px solid black; */
+        }
+    }
+    .email{
+        @include flex-box(column, center, center);
+        /* border: 1px solid black; */
+        width: 100%;
+        a{
+            margin: 10px auto;
+        }
+    }
+    .imgBox{
+        width: 100%;
+        padding: 0px 100px 50px 100px;
+    }
+
+    #productive-container{
+        @include flex-box(column-reverse, center, center);
+        padding-left: 0px;
+        padding-right: 0px;
+        padding-bottom: 10px;
+    }
+    .content-2{
+        @include flex-box(column, center, center);
+        width: 100%;
+        margin: 25px auto;
+        padding: 20px 20px 50px 20px;
+        /* border: 1px solid black; */
+        h2{
+            text-align: center;
+            margin: 10px auto;
+            width: 100%;
+        }
+        .para{
+            margin: 10px auto; 
+            width: 100%;
+            padding: 10px 20px 10px 20px;
+        }
+        a{
+            margin: 30px 0px 50px 0px;
+        }
+    }
+    .imgBox2{
+        /* border: 1px solid black; */
+        width: 100%;
+        padding: 0px 100px 50px 100px;
+        position: relative;
+        top: -70px;
+    }
+    .details{
+        @include flex-box(column,center,flex-start);
+        /* border: 1px solid black; */
+        margin: 10px 0px 0px 0px;
+        p{
+            padding: 0px 0px 0px 0px;
+            margin: 0px 0px 10px 0px;
+        }
+    }
+    #access-today{
+        width: 100%;
+        padding: 100px 60px 100px 60px;
+        /* border: 1px solid black; */
+        @include flex-box(column,center, center);
+    }
+    .content-3{
+        @include flex-box(column,center,center);
+        width: 100%;
+        /* border: 1px solid black; */
+        padding: 10px 10px 20px 10px;
+        h4{
+            text-align: center;
+        }
+        p{
+            text-align: center;
+            padding: 10px 20px 10px 20px;
+        }
+    }
+    .email-2{
+        /* border: 1px solid black; */
+        width: 100%;
+        padding: 10px 20px 10px 20px;
+
+        #email-2{
+            margin: 15px auto;
+            padding: 14px 10px 14px 10px;
+            width: 100%;
+        }
+        a{
+            /* border: 1px solid black; */
+            margin: 0px auto;
+            padding: 14px 10px 14px 10px;
+            width: 100%;
+        }
+    }
+}
+/* @media all and (max-width: 840px) { */
