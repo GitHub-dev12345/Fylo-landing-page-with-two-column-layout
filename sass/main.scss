@@ -58,13 +58,16 @@ header{
     }
 }
 .email{
+    @include flex-box(row, flex-start, center);
     padding: 12px 0px 15px 0px;
-    a{  
-        @include topBtn;
-    }
 }
+
 #email{
     @include topEmail;
+}
+
+#btnTop{
+    @include topBtn;
 }
 
 .imgBox{
@@ -91,6 +94,7 @@ header{
     }
     a{
         @include content-2An;
+        width: 50%;
     }
 }
 .para{
@@ -155,15 +159,14 @@ header{
 .email-2{
     width: 40%;
     @include flex-box(column, flex-start, flex-start);
-    a{
-        @include bottomBtn;
-        &:hover {
-            opacity: 0.7;
-        }
-
-        &:focus-visible{
-            opacity: 0.7;
-        }
+}
+#btnBottom{
+    @include bottomBtn;
+    &:hover {
+        opacity: 0.7;
+    }
+    &:focus-visible{
+        opacity: 0.7;
     }
 }
 #email-2{
@@ -275,13 +278,12 @@ footer{
         padding: 80px 50px 40px 0px;
     }
     .email{
-        @include flex-box(column, flex-start, flex-start);
-        transition: 0.3s;
-        a{
-            align-self: flex-start;
-            margin: 10px 0px 15px 0px;
-            width: 100%;
-        }
+        @include flex-box(column, center, center);
+    }
+    #btnTop{
+        align-self: flex-start;
+        margin: 10px 0px 15px 0px;
+        width: 100%;
     }
     #email{
         margin: 0px 0px 10px 0px;
@@ -372,10 +374,10 @@ footer{
         padding: 10px 20px 10px 20px;
         margin: 0px 0px 0px 20px;
         width: 100%;
-        a{
-            margin: 10px auto;
-            width: 100%; 
-        }
+    }
+    #btnTop{
+        margin: 10px auto;
+        width: 100%;
     }
     #email{
         width: 100%;
@@ -406,7 +408,10 @@ footer{
             width: 100%;
         }
         a{
+            display: flex;
+            justify-content: center;
             margin: 30px 0px 30px 0px;
+            width: 100%;
         }
     }
     .para{
@@ -453,15 +458,14 @@ footer{
     .email-2{
         width: 100%;
         padding: 0px 40px 10px 40px;
-        a{
-            margin: 0px auto;
-            padding: 10px 10px 10px 10px;
-            width: 100%;
-        }
     }
     #email-2{
         margin: 15px auto;
-        padding: 10px 10px 10px 10px;
+        width: 100%;
+        transition: 0.3s;
+    }
+    #btnBottom{
+        margin: 0px auto;
         width: 100%;
     }
 }

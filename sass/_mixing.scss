@@ -28,14 +28,14 @@
 // In ID file-flexcontianer, Content-1 Mixing Code
 @mixin content-1 {
     padding: 0px 30px 10px 6px;
-    margin: -31px 0px 0px 61px;
+    margin: -26px 0px 0px 65px;
     width: 50%;
     height: auto;
 }
 
 // In Content-1, h1 tag Mixing Code
 @mixin content-1H1 {
-    font-size: clamp(1.6rem, 10vw, 2.8vw);    
+    font-size: clamp(1.6rem, 10vw, 2.9vw);    
     font-family: 'Raleway', sans-serif;
     font-weight: 700;
     margin: 0px 0px 16px 0px;
@@ -54,26 +54,28 @@
 @mixin topEmail {
     border: 1px solid black;
     width: 52%;
-    padding: 15px 0px 10px 20px;
+    padding: 12px 0px 12px 20px;
     border-radius: 4px;
     font-size: clamp(0.7rem, 10vw, 1.1vw);
     color: lightgrey;
+    font-family: 'Open Sans', sans-serif;
 }
 
 // In content-1, Top Button Mixing Code
 @mixin topBtn {
-    padding: 17px 70px 12px 70px;   
-    margin: 0px 0px 0px 12px;
+    padding: 14px 70px 14px 70px;   
+    margin: 0px 0px 0px 17px;
     color: white;
     background: hsl(224, 93%, 58%);
     text-align: center;
     text-decoration: none;
     font-size: clamp(0.85rem, 10vw, 1vw);
     font-weight: 600;
-    border: 1px solid skyblue transparent;
+    font-family: 'Raleway', sans-serif;
     outline: none;
-    border-radius: 5px;
-    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+    border: transparent;
+    border-radius: 3px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
     cursor: pointer;
     &:hover {
         opacity: 0.7;
@@ -133,9 +135,8 @@
     font-size: clamp(0.85rem, 10vw, 1.21vw);
     margin: 0px 0px 50px 0px;
     padding: 0px 0px 5px 0px;
-    /* border-bottom:  2px solid  hsl(170, 45%, 43%);
-    width: 30%; */
     text-decoration: none;
+    width: 30%;
     color: hsl(170, 45%, 43%);
     &:hover{
         opacity: 0.5;
@@ -216,6 +217,7 @@
     font-size: clamp(0.7rem, 10vw, 1.1vw);
     color: lightgrey;
     box-shadow: 2px 0px 11px rgba(0, 0, 0, 0.5);
+    font-family: 'Raleway', sans-serif;
 }
 // In class email, button Mixing Code
 @mixin bottomBtn {
@@ -228,8 +230,10 @@
     font-size: clamp(0.75rem, 10vw, 1vw);
     font-weight: 600;
     border-radius: 5px;
+    border: transparent;
     outline: none;
-    border-radius: 5px;
+    font-family: 'Raleway', sans-serif;
+    border-radius: 4px;
     box-shadow: 2px 0px 11px rgba(0, 0, 0, 0.5);
     cursor: pointer;
 }

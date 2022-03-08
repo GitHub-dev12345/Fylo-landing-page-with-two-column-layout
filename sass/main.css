@@ -197,13 +197,13 @@ header {
       -ms-flex-align: space-between;
           align-items: space-between;
   padding: 0px 30px 10px 6px;
-  margin: -31px 0px 0px 61px;
+  margin: -26px 0px 0px 65px;
   width: 50%;
   height: auto;
 }
 
 .content-1 h1 {
-  font-size: clamp(1.6rem, 10vw, 2.8vw);
+  font-size: clamp(1.6rem, 10vw, 2.9vw);
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
   margin: 0px 0px 16px 0px;
@@ -218,41 +218,56 @@ header {
 }
 
 .email {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 12px 0px 15px 0px;
 }
 
-.email a {
-  padding: 17px 70px 12px 70px;
-  margin: 0px 0px 0px 12px;
+#email {
+  border: 1px solid black;
+  width: 52%;
+  padding: 12px 0px 12px 20px;
+  border-radius: 4px;
+  font-size: clamp(0.7rem, 10vw, 1.1vw);
+  color: lightgrey;
+  font-family: 'Open Sans', sans-serif;
+}
+
+#btnTop {
+  padding: 14px 70px 14px 70px;
+  margin: 0px 0px 0px 17px;
   color: white;
   background: #3065f8;
   text-align: center;
   text-decoration: none;
   font-size: clamp(0.85rem, 10vw, 1vw);
   font-weight: 600;
-  border: 1px solid skyblue transparent;
+  font-family: 'Raleway', sans-serif;
   outline: none;
-  border-radius: 5px;
-  -webkit-box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
-          box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+  border: transparent;
+  border-radius: 3px;
+  -webkit-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+          box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
   cursor: pointer;
 }
 
-.email a:hover {
+#btnTop:hover {
   opacity: 0.7;
 }
 
-.email a:focus-visible {
+#btnTop:focus-visible {
   opacity: 0.7;
-}
-
-#email {
-  border: 1px solid black;
-  width: 52%;
-  padding: 15px 0px 10px 20px;
-  border-radius: 4px;
-  font-size: clamp(0.7rem, 10vw, 1.1vw);
-  color: lightgrey;
 }
 
 .imgBox {
@@ -323,10 +338,10 @@ header {
   font-size: clamp(0.85rem, 10vw, 1.21vw);
   margin: 0px 0px 50px 0px;
   padding: 0px 0px 5px 0px;
-  /* border-bottom:  2px solid  hsl(170, 45%, 43%);
-    width: 30%; */
   text-decoration: none;
+  width: 30%;
   color: #3c9f8f;
+  width: 50%;
 }
 
 .content-2 a:hover {
@@ -505,7 +520,7 @@ header {
           align-items: flex-start;
 }
 
-.email-2 a {
+#btnBottom {
   padding: 15px 40px 15px 40px;
   margin: 15px 0px 20px 0px;
   color: white;
@@ -515,18 +530,20 @@ header {
   font-size: clamp(0.75rem, 10vw, 1vw);
   font-weight: 600;
   border-radius: 5px;
+  border: transparent;
   outline: none;
-  border-radius: 5px;
+  font-family: 'Raleway', sans-serif;
+  border-radius: 4px;
   -webkit-box-shadow: 2px 0px 11px rgba(0, 0, 0, 0.5);
           box-shadow: 2px 0px 11px rgba(0, 0, 0, 0.5);
   cursor: pointer;
 }
 
-.email-2 a:hover {
+#btnBottom:hover {
   opacity: 0.7;
 }
 
-.email-2 a:focus-visible {
+#btnBottom:focus-visible {
   opacity: 0.7;
 }
 
@@ -539,6 +556,7 @@ header {
   color: lightgrey;
   -webkit-box-shadow: 2px 0px 11px rgba(0, 0, 0, 0.5);
           box-shadow: 2px 0px 11px rgba(0, 0, 0, 0.5);
+  font-family: 'Raleway', sans-serif;
 }
 
 /* Footer Element Tag CSS Code */
@@ -790,16 +808,14 @@ footer {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-    -webkit-transition: 0.3s;
-    transition: 0.3s;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
-  .email a {
+  #btnTop {
     -ms-flex-item-align: start;
         align-self: flex-start;
     margin: 10px 0px 15px 0px;
@@ -974,7 +990,7 @@ footer {
     margin: 0px 0px 0px 20px;
     width: 100%;
   }
-  .email a {
+  #btnTop {
     margin: 10px auto;
     width: 100%;
   }
@@ -1032,7 +1048,14 @@ footer {
     width: 100%;
   }
   .content-2 a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     margin: 30px 0px 30px 0px;
+    width: 100%;
   }
   .para {
     margin: 10px 0px -10px 0px;
@@ -1114,14 +1137,14 @@ footer {
     width: 100%;
     padding: 0px 40px 10px 40px;
   }
-  .email-2 a {
-    margin: 0px auto;
-    padding: 10px 10px 10px 10px;
-    width: 100%;
-  }
   #email-2 {
     margin: 15px auto;
-    padding: 10px 10px 10px 10px;
+    width: 100%;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+  #btnBottom {
+    margin: 0px auto;
     width: 100%;
   }
 }
