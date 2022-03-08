@@ -21,92 +21,98 @@
 
 /* Main CSS Code */
 body{
-    @include flex-box(column, center, flex-end);
-    font-size: 1rem;
+    @include flex-box(column, center, center);
     font-family: 'Open Sans', sans-serif; 
+    font-size: 1rem;
 }
 
 header{
     width: 100%;
-    @include flex-box(row, space-around, center);
-    padding: 70px 0px 70px 85px;
+    @include flex-box(row, space-between, center);
+    padding: 70px 0px 72px 85px;
 }
 
 #headerImg{
-    width: 50%;
-    /* border: 1px solid black; */
+    width: 20%;
     img{
-        width: 26%;
+        width: 65%;
     }
 }
 #navList{
-    /* border: 1px solid black; */
     @include flex-box(row, flex-end, flex-start);
-    width: 50%;
+    width: 70%;
     a{
-        font-size: 18px;  
+        font-size: 18px; 
         text-decoration: none;
         color: hsl(238, 22%, 44%);
         padding: 5px 20px 5px 40px;
         font-weight: 600;
         font-family: 'Raleway', sans-serif;
-        /* border: 1px solid black; */
         position: relative;
     }
 }
 
 #files-flexContainer{
-    width: 100%;
     @include flex-box(row, space-around, center);
-    padding: 25px 17px 180px 15px;
+    width: 100%;
+    padding: 25px 17px 180px 16px;
 }
 .content-1{
+    /* border: 1px solid black; */
     @include flex-box(column, space-between, space-between);
-    padding: 10px 20px 10px 10px;
-    margin: -31px 25px 0px 61px;
+    padding: 0px 30px 10px 6px;
+    margin: -31px 0px 0px 61px;
     width: 50%;
     height: auto;
     h1{
-        font-size: clamp(0.95rem, 10vw, 2.76rem);     
+        font-size: clamp(1.6rem, 10vw, 2.8vw);    
         font-family: 'Raleway', sans-serif;
         font-weight: 700;
         margin: 0px 0px 16px 0px;
     }
     p{
-        font-size: clamp(1rem, 10vw, 1.26rem);    
+        font-size: clamp(0.9rem, 10vw, 1.3vw);    
         font-family: 'Open Sans', sans-serif;
         color:  hsl(243, 87%, 12%);
         line-height: 1.31;
-        margin: 0px 0px 14px 0px;
+        margin: 0px 0px 16px 0px;
     }
 }
 
 .email{
-    padding: 15px 0px 15px 0px;
+    padding: 12px 0px 15px 0px;
     #email{
-        border: 2px solid blue;
-        padding: 13px 140px 10px 15px;
+        border: 1px solid black;
+        width: 52%;
+        padding: 15px 0px 10px 20px;
         border-radius: 4px;
+        font-size: clamp(0.7rem, 10vw, 1.1vw);
+        color: lightgrey;
     }
-    a{
-        padding: 15px 70px 13px 70px;
-        margin: 0px 0px 0px 15px;
+    a{  
+        padding: 17px 70px 12px 70px;   
+        margin: 0px 0px 0px 12px;
         color: white;
         background: hsl(224, 93%, 58%);
         text-align: center;
         text-decoration: none;
-        font-size: 15px;
+        font-size: clamp(0.85rem, 10vw, 1vw);
         font-weight: 600;
-        border: 1px solid skyblue;
+        border: 1px solid skyblue transparent;
+        outline: none;
         border-radius: 5px;
-        box-shadow: 1px 2px 7px rgba(0, 0, 0, 0.5);
+        box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
     }
 }
 
 .imgBox{
+    /* border: 1px solid black; */
     width: 50%;
     height: auto;
     margin: 0px 10px 0px 0px;
+    img{
+        width: 100%;
+    }
 }
 
 #curved{
@@ -114,38 +120,41 @@ header{
     background: url(../images/bg-curve-desktop.svg) no-repeat;
     background-size: cover;
     background-position: top center;
-    min-width: 10vw;
     min-height: 12vh;
 }
 #productive-container{
+    @include flex-box(row, space-around, flex-start);
     width: 100%;
-    @include flex-box(row, space-around, center);
-    padding: 100px 0px 110px 50px;
+    padding: 100px 0px 100px 82px;
     background: hsl(240, 75%, 98%);
 }
 
 .content-2{
-    width: 50%;
+    padding: 0px 0px 0px 0px;
+    width: 52%;
     height: auto;
     h2{
-        font-size: clamp(1rem, 10vw, 2.8rem);
+        font-size: clamp(1rem, 1440px, 2.97vw);
         font-family: 'Raleway', sans-serif;
         font-weight: 700;
-        margin: -15px 0px 31px 0px;
+        margin: -15px 0px 32px 0px;
     }
     .para{
-        font-size: clamp(1rem, 10vw, 1.14rem);
+        font-size: clamp(0.85rem, 10vw, 1.21vw);
         font-family: 'Open Sans', sans-serif;
         color:  hsl(243, 87%, 12%);
         line-height: 1.5;
-        margin: 0px 120px 15px 0px;
+        margin: 0px 140px 15px 0px;
     }
     a{
         @include flex-box(row, flex-start, center);
-        font-size: 19px;
+        font-size: clamp(0.85rem, 10vw, 1.21vw);
         margin: 0px 0px 50px 0px;
-        text-decoration: underline;
+        padding: 0px 0px 5px 0px;
+        text-decoration: none;
         color: hsl(170, 45%, 43%);
+        /* border-bottom: 2px solid hsl(170, 45%, 43%); */
+        /* width: 25.50%; */
 
         img{
             margin: 0px 0px 0px 5px;
@@ -155,8 +164,9 @@ header{
 
 #card{
     width: 390px;
-    height: 240px;
-    padding: 35px 40px 20px 40px;
+    height: auto;
+    padding: 30px 20px 35px 30px;
+    margin: 0px 0px 20px 0px;
     background: white;
     border-radius: 8px;
     box-shadow: 2px 0px 11px rgba(0, 0, 0, 0.5);
@@ -164,26 +174,30 @@ header{
         width: 5.5%;
     }
     .fylop{
-        font-size: clamp(0.9rem, 10vw, 0.95rem);
-        margin: 10px 0px 17px 0px;
+        font-size: clamp(0.8rem, 10vw, 1.05vw);
+        margin: 10px 0px 15px 0px;
         line-height: 1.6;
     }
 }
 
 #profile{
-    @include flex-box(row, space-between,center);
+/*     border: 1px solid black; */
+    @include flex-box(row, flex-start,center);
     img{
-        width: 11%;
+        width: 10%;
         border-radius: 100%;
     }
 }
 .details{
+    /* border: 1px solid black; */
     @include flex-box(column,flex-end,flex-start);
+    padding: 0px 0px 0px 8px;
     position: relative;
     top: 0px;
-    right: 152px;
+/*     right: 152px; */
     h3{
-        font-size: 0.75rem;
+        font-size: 0.8rem;
+        letter-spacing: 1.5px;
         font-weight: bold;
     }
     .founder{
@@ -192,9 +206,13 @@ header{
 }
 
 .imgBox2{
-    margin: -45px 0px 0px 0px;
-    width: 40%;
+    margin: 0px 0px 0px 0px;
+    width: 48%;
     height: auto;
+    img{
+        width: 100%;
+        padding: 20px 25px 70px 70px;
+    }
 }
 
 #access-today{
@@ -210,25 +228,29 @@ header{
     height: auto;
     padding: 0px 80px 20px 0px;
     h4{
-        font-size: clamp(1rem, 10vw, 2.21rem);
+        font-size: clamp(1.15rem, 100vw, 2.31vw);
         font-weight: 600;
         color: white;
         font-family: 'Raleway', sans-serif; ;
         margin: 0px 0px 15px 0px;
     }
     p{
-        font-size: clamp(1rem, 10vw, 1.2rem);
+        font-size: clamp(0.89rem, 10vw, 1.29vw);
         color: white;
         opacity: 0.8;
         line-height: 1.4;
     }
 }
 .email-2{
-    @include flex-box(column, flex-start, baseline);
+    width: 40%;
+    @include flex-box(column, flex-start, flex-start);
     #email-2{
-        border: 2px solid blue;
-        padding: 14px 320px 14px 20px;
+        border: 1px solid blue;
+        width: 100%;
+        padding: 15px 0px 10px 20px;
         border-radius: 4px;
+        font-size: clamp(0.7rem, 10vw, 1.1vw);
+        color: lightgrey;
         box-shadow: 2px 0px 11px rgba(0, 0, 0, 0.5);
     }
     a{
@@ -238,7 +260,7 @@ header{
         background: hsl(224, 93%, 58%);
         text-align: center;
         text-decoration: none;
-        font-size: clamp(1rem, 10vw, 1rem);
+        font-size: clamp(0.75rem, 10vw, 1vw);
         font-weight: 600;
         border-radius: 5px;
         box-shadow: 2px 0px 11px rgba(0, 0, 0, 0.5);
@@ -246,16 +268,14 @@ header{
 }
 
 footer{
-    /* border: 1px solid white; */
     width: 100%;
     @include flex-box(column, flex-start, flex-start);
-    padding: 115px 50px 60px 50px;
+    padding: 100px 50px 66px 45px;
     background: hsl(243, 87%, 12%);
 }
 
 #head{
     width: 100%;
-    /* border: 1px solid white; */
     img{
         filter:  brightness(0) invert(1);
         width: 14.50%;
@@ -263,19 +283,16 @@ footer{
     }
 }
 #footer-container{
-    
     width: 100%;
     @include flex-box(row, space-between, flex-start);
 }
 
 .contact{
-    /* border: 1px solid white; */
     @include flex-box(column, flex-start, flex-start);
     margin: 0px 0px 10px 35px;
 }
 
 .contact-Us, .mail{
-    /* border: 1px solid white; */
     @include flex-box(row, center, center);
     padding: 0px 0px 17px 0px;
     a{
@@ -290,14 +307,12 @@ footer{
 }
 
 #links{
-    /* border: 1px solid white; */
     @include flex-box(row, space-between, flex-start);
     position: relative;
     right: 40px;
 }
 
 .link-1{
-    /* border: 1px solid white; */
     @include flex-box(column, space-between, baseline);
     a{
         color: white;
@@ -311,8 +326,7 @@ footer{
 }
 
 .link-2{
-    /* border: 1px solid white; */
-    @include flex-box(column, space-between, baseline);
+    @include  flex-box(column, space-between, baseline);
     a{
         color: white;
         text-decoration: none;
@@ -325,7 +339,6 @@ footer{
 }
 
 #social{
-    /* border: 1px solid white; */
     @include flex-box(row, space-around, center);
     position: relative;
     right: 150px;
@@ -344,8 +357,12 @@ footer{
         transition: 0.3s;
     }
     #head{
-        margin: 0px 0px 20px 0px;
+        margin: 0px 0px 40px 0px;
         transition: 0.3s;
+        img{
+            width: 25%;
+            margin: 0px 0px 0px 16px;
+        }
     }
     #files-flexContainer{
         transition: 0.4s;
@@ -357,14 +374,16 @@ footer{
         #email{
             margin: 0px 0px 10px 0px;
             transition: 0.3s;
+            width: 100%;
         }
         a{
             align-self: flex-start;
             margin: 10px 0px 15px 0px;
+            width: 100%;
         }
     }
     footer{
-        padding: 100px 10px 80px 10px;
+        padding: 50px 10px 50px 25px;
     }
     #footer-container{
             @include flex-box(column, flex-start, flex-start);
@@ -375,7 +394,7 @@ footer{
         width: 100%;
         margin: 0px 0px 10px 0px;
         .contact-Us, .mail{
-            margin: 0px 0px 0px 36px;
+            margin: 0px 0px 0px 14px;
         }
     }
     #links{
@@ -386,14 +405,14 @@ footer{
         width: 100%;
     }
     .link-1{
-        margin: 20px 0px 30px 36px;
+        margin: 20px 0px 30px 15px;
         transition: 0.3s;
         a{
             right: 0px;
         }
     }
     .link-2{
-        margin: 20px 0px 30px 36px;
+        margin: 20px 0px 30px 15px;
         transition: 0.3s;
         a{
             left: 0px;
@@ -401,103 +420,112 @@ footer{
     }
     #social{
         width: 100%;
+        top: 0px;
+        right: 0px;
         @include flex-box(row, center, center);
         transition: 0.3s;
-        top: 25px;
-        right: 0px;
         a{
             padding: 0px 20px 0px 0px
         }
     }
 }
 
-@media all and (max-width: 1150px) {
+@media all and (max-width: 1065px) {
     header{
-        padding-left: 30px;
-        padding-right: 10px;
+        padding: 50px 18px 50px 18px;
+        transition: 0.3s;
+    }
+    #headerImg{
+        width: 45%;
     }
     #files-flexContainer{
         @include flex-box(column-reverse, center, center);
         padding: 0px 0px 50px 0px;
-        width: 100%;
-        /* border: 1px solid black; */
         transition: 0.3s;
     }
-    .email{
-        padding: 10px 20px 10px 20px;
-        #email{
-            width: 100%;
-        }
-        a{
-            width: 100%;
-        }
-    }
     .content-1{
-        @include flex-box(column, center, center);
         /* border: 1px solid black; */
+        @include flex-box(column, center, center);
         width: 100%;
         margin: 25px auto;
 
         h1{
+            /* border: 1px solid black; */
+            margin: 5px 0px 5px 20px;
             text-align: center;
             width: 100%;
         }
         p{
             padding: 10px 20px 10px 20px;
+            margin: 5px 0px 5px 20px;
+            /* border: 1px solid black; */
             text-align: center;
             width: 100%;
-            /* border: 1px solid black; */
         }
     }
     .email{
         @include flex-box(column, center, center);
+        padding: 10px 20px 10px 20px;
+        margin: 0px 0px 0px 20px;
         /* border: 1px solid black; */
         width: 100%;
+        #email{
+            width: 100%;
+        }
         a{
             margin: 10px auto;
+            width: 100%; 
         }
     }
     .imgBox{
         width: 100%;
-        padding: 0px 100px 50px 100px;
+        margin: 0px auto;
+        img{
+            padding: 15px 30px 0px 30px;
+            width: 85%;
+            margin: auto;
+        }
     }
-
     #productive-container{
         @include flex-box(column-reverse, center, center);
         padding-left: 0px;
         padding-right: 0px;
-        padding-bottom: 10px;
+        padding-bottom: 0px;
     }
     .content-2{
         @include flex-box(column, center, center);
         width: 100%;
-        margin: 25px auto;
+        margin: 25px 0px 0px 0px;
         padding: 20px 20px 50px 20px;
-        /* border: 1px solid black; */
         h2{
+            /* border: 1px solid black; */
             text-align: center;
             margin: 10px auto;
             width: 100%;
         }
         .para{
-            margin: 10px auto; 
+            /* border: 1px solid black; */
+            margin: 10px 0px -10px 0px; 
             width: 100%;
-            padding: 10px 20px 10px 20px;
+            padding: 5px 20px 10px 0px;
+            text-align: center;
         }
         a{
-            margin: 30px 0px 50px 0px;
+            margin: 30px 0px 30px 0px;
         }
     }
     .imgBox2{
-        /* border: 1px solid black; */
         width: 100%;
-        padding: 0px 100px 50px 100px;
-        position: relative;
-        top: -70px;
+        margin: -100px 0px 0px 0px;
+        img{
+            padding: 0px 25px 0px 25px;
+            width: 85%;
+            margin: auto;
+        }
+
     }
     .details{
         @include flex-box(column,center,flex-start);
-        /* border: 1px solid black; */
         margin: 10px 0px 0px 0px;
         p{
             padding: 0px 0px 0px 0px;
@@ -505,16 +533,14 @@ footer{
         }
     }
     #access-today{
-        width: 100%;
-        padding: 100px 15px 100px 15px;
-        /* border: 1px solid black; */
         @include flex-box(column,center, center);
+        width: 100%;
+        padding: 40px 15px 60px 15px;
     }
     .content-3{
         @include flex-box(column,center,center);
-        width: 100%;
-        /* border: 1px solid black;  */   
-        padding: 10px 10px 20px 10px;
+        width: 100%; 
+        padding: 10px 10px 0px 10px;
         h4{
             text-align: center;
         }
@@ -526,30 +552,79 @@ footer{
     .email-2{
         /* border: 1px solid black; */
         width: 100%;
-        padding: 10px 20px 10px 20px;
+        padding: 0px 40px 10px 40px;
 
         #email-2{
             margin: 15px auto;
-            padding: 14px 10px 14px 10px;
+            padding: 10px 10px 10px 10px;
             width: 100%;
         }
         a{
-            /* border: 1px solid black; */
             margin: 0px auto;
-            padding: 14px 10px 14px 10px;
+            padding: 10px 10px 10px 10px;
             width: 100%;
         }
     }
 }
-/* @media all and (max-width: 400px) {
-    #headerImg{
+@media all and (max-width: 707px) {
+    #head{
         img{
             width: 50%;
+            transition : 0.4s;
         }
+    }
+    .imgBox{
+        img{
+            width: 100%;
+            transition: 0.3s;
+        }
+    }
+    .imgBox2{
+        img{
+            width: 100%;
+            transition: 0.3s;
+        }
+    }
+}
+@media screen and (max-width: 671px) {
+    #navList{
+        a{
+            padding: 5px 35px 5px 5px;
+            font-size: 3vw;
+            transition: 0.4s;
+        }
+    }
+}
+@media all and (max-width: 555px){
+    header{
+        padding-top: 20px;
     }
     #navList{
         a{
-            font-size: 2vw;
+            padding: 5px 12px 5px 12px;
+            transition: 0.4s;
         }
     }
-} */
+    .content-2{
+        .para{
+            text-align: left;
+            transition: 0.3s;
+        }
+    }
+}
+@media all and (max-width: 435px) {
+    #card{
+        width: 100%;
+        transform: scale(0.9);
+        transition: 0.4s;
+    }
+/*     .details{
+        transition: 0.4s
+    } */
+    #curved{
+        width: 100%;
+        background: url(../images/bg-curve-mobile.svg) no-repeat;
+        background-size: cover;
+        background-position: top center;
+    }
+}
