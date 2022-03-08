@@ -1,9 +1,7 @@
 /* Headings, Call-to-actions, Header Navigation */
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
-/* font-family: 'Raleway', sans-serif; */
 /* Body */
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
-/* font-family: 'Open Sans', sans-serif; */
 /* Box sizing rules */
 *,
 *::before,
@@ -83,6 +81,7 @@ select {
 }
 
 /* Main CSS Code */
+/* Body Design CSS Code */
 body {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -101,8 +100,8 @@ body {
   font-size: 1rem;
 }
 
+/* Header tag Element Design CSS Code */
 header {
-  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -117,6 +116,7 @@ header {
       -ms-flex-align: center;
           align-items: center;
   padding: 70px 0px 72px 85px;
+  width: 100%;
 }
 
 #headerImg {
@@ -152,8 +152,19 @@ header {
   font-weight: 600;
   font-family: 'Raleway', sans-serif;
   position: relative;
+  cursor: pointer;
 }
 
+#navList a:hover {
+  opacity: 0.7;
+}
+
+#navList a:focus-visible {
+  opacity: 0.7;
+}
+
+/* In Main tag Element, Section tag Design CSS Code */
+/* ID- Files-FlexContainer Design CSS Code */
 #files-flexContainer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -167,12 +178,11 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 100%;
   padding: 25px 17px 180px 16px;
+  width: 100%;
 }
 
 .content-1 {
-  /* border: 1px solid black; */
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -211,15 +221,6 @@ header {
   padding: 12px 0px 15px 0px;
 }
 
-.email #email {
-  border: 1px solid black;
-  width: 52%;
-  padding: 15px 0px 10px 20px;
-  border-radius: 4px;
-  font-size: clamp(0.7rem, 10vw, 1.1vw);
-  color: lightgrey;
-}
-
 .email a {
   padding: 17px 70px 12px 70px;
   margin: 0px 0px 0px 12px;
@@ -234,10 +235,27 @@ header {
   border-radius: 5px;
   -webkit-box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
           box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+.email a:hover {
+  opacity: 0.7;
+}
+
+.email a:focus-visible {
+  opacity: 0.7;
+}
+
+#email {
+  border: 1px solid black;
+  width: 52%;
+  padding: 15px 0px 10px 20px;
+  border-radius: 4px;
+  font-size: clamp(0.7rem, 10vw, 1.1vw);
+  color: lightgrey;
 }
 
 .imgBox {
-  /* border: 1px solid black; */
   width: 50%;
   height: auto;
   margin: 0px 10px 0px 0px;
@@ -247,6 +265,7 @@ header {
   width: 100%;
 }
 
+/* ID- Curved Design CSS Code */
 #curved {
   width: 100%;
   background: url(../images/bg-curve-desktop.svg) no-repeat;
@@ -255,6 +274,7 @@ header {
   min-height: 12vh;
 }
 
+/* ID- Productive-container Design CSS Code */
 #productive-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -268,9 +288,9 @@ header {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  width: 100%;
   padding: 100px 0px 100px 82px;
   background: #f6f6fe;
+  width: 100%;
 }
 
 .content-2 {
@@ -284,14 +304,6 @@ header {
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
   margin: -15px 0px 32px 0px;
-}
-
-.content-2 .para {
-  font-size: clamp(0.85rem, 10vw, 1.21vw);
-  font-family: 'Open Sans', sans-serif;
-  color: #070439;
-  line-height: 1.5;
-  margin: 0px 140px 15px 0px;
 }
 
 .content-2 a {
@@ -311,16 +323,33 @@ header {
   font-size: clamp(0.85rem, 10vw, 1.21vw);
   margin: 0px 0px 50px 0px;
   padding: 0px 0px 5px 0px;
+  /* border-bottom:  2px solid  hsl(170, 45%, 43%);
+    width: 30%; */
   text-decoration: none;
   color: #3c9f8f;
-  /* border-bottom: 2px solid hsl(170, 45%, 43%); */
-  /* width: 25.50%; */
+}
+
+.content-2 a:hover {
+  opacity: 0.5;
+}
+
+.content-2 a:focus-visible {
+  opacity: 0.7;
 }
 
 .content-2 a img {
   margin: 0px 0px 0px 5px;
 }
 
+.para {
+  font-size: clamp(0.85rem, 10vw, 1.21vw);
+  font-family: 'Open Sans', sans-serif;
+  color: #070439;
+  line-height: 1.5;
+  margin: 0px 140px 15px 0px;
+}
+
+/* In Content-2, Card Design CSS Code */
 #card {
   width: 390px;
   height: auto;
@@ -336,14 +365,14 @@ header {
   width: 5.5%;
 }
 
-#card .fylop {
+.fylop {
   font-size: clamp(0.8rem, 10vw, 1.05vw);
   margin: 10px 0px 15px 0px;
   line-height: 1.6;
 }
 
+/* Inner Card Bottom Profile Design CSS Code */
 #profile {
-  /*     border: 1px solid black; */
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -364,8 +393,8 @@ header {
   border-radius: 100%;
 }
 
+/* Inner Profile Design Details Class Design CSS Code */
 .details {
-  /* border: 1px solid black; */
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -382,7 +411,6 @@ header {
   padding: 0px 0px 0px 8px;
   position: relative;
   top: 0px;
-  /*     right: 152px; */
 }
 
 .details h3 {
@@ -391,7 +419,7 @@ header {
   font-weight: bold;
 }
 
-.details .founder {
+.founder {
   font-size: 10px;
 }
 
@@ -406,6 +434,7 @@ header {
   padding: 20px 25px 70px 70px;
 }
 
+/* ID- access-today Design CSS Code */
 #access-today {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -476,17 +505,6 @@ header {
           align-items: flex-start;
 }
 
-.email-2 #email-2 {
-  border: 1px solid blue;
-  width: 100%;
-  padding: 15px 0px 10px 20px;
-  border-radius: 4px;
-  font-size: clamp(0.7rem, 10vw, 1.1vw);
-  color: lightgrey;
-  -webkit-box-shadow: 2px 0px 11px rgba(0, 0, 0, 0.5);
-          box-shadow: 2px 0px 11px rgba(0, 0, 0, 0.5);
-}
-
 .email-2 a {
   padding: 15px 40px 15px 40px;
   margin: 15px 0px 20px 0px;
@@ -497,10 +515,33 @@ header {
   font-size: clamp(0.75rem, 10vw, 1vw);
   font-weight: 600;
   border-radius: 5px;
+  outline: none;
+  border-radius: 5px;
+  -webkit-box-shadow: 2px 0px 11px rgba(0, 0, 0, 0.5);
+          box-shadow: 2px 0px 11px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+.email-2 a:hover {
+  opacity: 0.7;
+}
+
+.email-2 a:focus-visible {
+  opacity: 0.7;
+}
+
+#email-2 {
+  border: 1px solid blue;
+  width: 100%;
+  padding: 15px 0px 10px 20px;
+  border-radius: 4px;
+  font-size: clamp(0.7rem, 10vw, 1.1vw);
+  color: lightgrey;
   -webkit-box-shadow: 2px 0px 11px rgba(0, 0, 0, 0.5);
           box-shadow: 2px 0px 11px rgba(0, 0, 0, 0.5);
 }
 
+/* Footer Element Tag CSS Code */
 footer {
   width: 100%;
   display: -webkit-box;
@@ -520,6 +561,7 @@ footer {
   background: #070439;
 }
 
+/* ID Head Design CSS Code */
 #head {
   width: 100%;
 }
@@ -531,6 +573,7 @@ footer {
   margin: 10px 0px 24px 35px;
 }
 
+/* ID Footer-Container Design CSS Code */
 #footer-container {
   width: 100%;
   display: -webkit-box;
@@ -548,6 +591,7 @@ footer {
           align-items: flex-start;
 }
 
+/* In ID Footer-Container, class contact Design CSS Code */
 .contact {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -565,6 +609,7 @@ footer {
   margin: 0px 0px 10px 35px;
 }
 
+/* Inner class Contact, .contact-Us design CSS Code */
 .contact-Us, .mail {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -591,6 +636,7 @@ footer {
   color: white;
 }
 
+/* Inner ID Footer-Container, ID links design CSS Code */
 #links {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -609,6 +655,7 @@ footer {
   right: 40px;
 }
 
+/* Inner ID links, class Link-1 design CSS Code */
 .link-1 {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -629,10 +676,19 @@ footer {
   color: white;
   text-decoration: none;
   padding: 0px 5px 17px 0px;
-  font-size: 17px;
   width: 100%;
+  font-size: 17px;
   position: relative;
+  cursor: pointer;
   right: 115px;
+}
+
+.link-1 a:hover {
+  opacity: 0.6;
+}
+
+.link-1 a:focus-visible {
+  opacity: 0.7;
 }
 
 .link-2 {
@@ -658,9 +714,19 @@ footer {
   width: 100%;
   font-size: 17px;
   position: relative;
+  cursor: pointer;
   left: 105px;
 }
 
+.link-2 a:hover {
+  opacity: 0.6;
+}
+
+.link-2 a:focus-visible {
+  opacity: 0.7;
+}
+
+/* ID Social Container CSS Code */
 #social {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -680,6 +746,13 @@ footer {
 
 #social a {
   padding: 5px 10px 5px 5px;
+  cursor: pointer;
+}
+
+#social a:hover {
+  opacity: 0.5;
+  -webkit-filter: #999;
+          filter: #999;
 }
 
 #social a img {
@@ -688,6 +761,7 @@ footer {
   width: 40px;
 }
 
+/* Responive CSS Code ( max-width: 1392px )*/
 @media screen and (max-width: 1392px) {
   header {
     padding: 60px 20px 60px 80px;
@@ -725,16 +799,16 @@ footer {
     -webkit-transition: 0.3s;
     transition: 0.3s;
   }
-  .email #email {
-    margin: 0px 0px 10px 0px;
-    -webkit-transition: 0.3s;
-    transition: 0.3s;
-    width: 100%;
-  }
   .email a {
     -ms-flex-item-align: start;
         align-self: flex-start;
     margin: 10px 0px 15px 0px;
+    width: 100%;
+  }
+  #email {
+    margin: 0px 0px 10px 0px;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
     width: 100%;
   }
   footer {
@@ -826,6 +900,7 @@ footer {
   }
 }
 
+/* Responive CSS Code ( max-width: 1065px )*/
 @media all and (max-width: 1065px) {
   header {
     padding: 50px 18px 50px 18px;
@@ -854,7 +929,6 @@ footer {
     transition: 0.3s;
   }
   .content-1 {
-    /* border: 1px solid black; */
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -872,7 +946,6 @@ footer {
     margin: 25px auto;
   }
   .content-1 h1 {
-    /* border: 1px solid black; */
     margin: 5px 0px 5px 20px;
     text-align: center;
     width: 100%;
@@ -880,7 +953,6 @@ footer {
   .content-1 p {
     padding: 10px 20px 10px 20px;
     margin: 5px 0px 5px 20px;
-    /* border: 1px solid black; */
     text-align: center;
     width: 100%;
   }
@@ -900,14 +972,13 @@ footer {
             align-items: center;
     padding: 10px 20px 10px 20px;
     margin: 0px 0px 0px 20px;
-    /* border: 1px solid black; */
-    width: 100%;
-  }
-  .email #email {
     width: 100%;
   }
   .email a {
     margin: 10px auto;
+    width: 100%;
+  }
+  #email {
     width: 100%;
   }
   .imgBox {
@@ -956,20 +1027,18 @@ footer {
     padding: 20px 20px 50px 20px;
   }
   .content-2 h2 {
-    /* border: 1px solid black; */
     text-align: center;
     margin: 10px auto;
     width: 100%;
   }
-  .content-2 .para {
-    /* border: 1px solid black; */
+  .content-2 a {
+    margin: 30px 0px 30px 0px;
+  }
+  .para {
     margin: 10px 0px -10px 0px;
     width: 100%;
     padding: 5px 20px 10px 0px;
     text-align: center;
-  }
-  .content-2 a {
-    margin: 30px 0px 30px 0px;
   }
   .imgBox2 {
     width: 100%;
@@ -1042,22 +1111,22 @@ footer {
     padding: 10px 20px 10px 20px;
   }
   .email-2 {
-    /* border: 1px solid black; */
     width: 100%;
     padding: 0px 40px 10px 40px;
-  }
-  .email-2 #email-2 {
-    margin: 15px auto;
-    padding: 10px 10px 10px 10px;
-    width: 100%;
   }
   .email-2 a {
     margin: 0px auto;
     padding: 10px 10px 10px 10px;
     width: 100%;
   }
+  #email-2 {
+    margin: 15px auto;
+    padding: 10px 10px 10px 10px;
+    width: 100%;
+  }
 }
 
+/* Responive CSS Code ( max-width: 707px )*/
 @media all and (max-width: 707px) {
   #head img {
     width: 50%;
@@ -1076,6 +1145,7 @@ footer {
   }
 }
 
+/* Responive CSS Code ( max-width: 671px )*/
 @media screen and (max-width: 671px) {
   #navList a {
     padding: 5px 35px 5px 5px;
@@ -1085,6 +1155,7 @@ footer {
   }
 }
 
+/* Responive CSS Code ( max-width: 555px )*/
 @media all and (max-width: 555px) {
   header {
     padding-top: 20px;
@@ -1094,13 +1165,14 @@ footer {
     -webkit-transition: 0.4s;
     transition: 0.4s;
   }
-  .content-2 .para {
+  .para {
     text-align: left;
     -webkit-transition: 0.3s;
     transition: 0.3s;
   }
 }
 
+/* Responive CSS Code ( max-width: 435px )*/
 @media all and (max-width: 435px) {
   #card {
     width: 100%;
@@ -1109,9 +1181,6 @@ footer {
     -webkit-transition: 0.4s;
     transition: 0.4s;
   }
-  /*     .details{
-        transition: 0.4s
-    } */
   #curved {
     width: 100%;
     background: url(../images/bg-curve-mobile.svg) no-repeat;

@@ -1,0 +1,271 @@
+// Mixing Codes
+// Flex-Box Mixing Code
+@mixin flex-box($dir, $jc, $alI) {
+    display: flex;
+    flex-direction: $dir;
+    justify-content: $jc;
+    align-items: $alI;
+}
+
+// In Navlist Anchor tag Mixing Code
+@mixin navListAnchor {
+    font-size: 18px; 
+    text-decoration: none;
+    color: hsl(238, 22%, 44%);
+    padding: 5px 20px 5px 40px;
+    font-weight: 600;
+    font-family: 'Raleway', sans-serif;
+    position: relative;
+    cursor: pointer;
+    &:hover{
+        opacity: 0.7;
+    }
+    &:focus-visible{
+        opacity: 0.7;
+    }
+}
+
+// In ID file-flexcontianer, Content-1 Mixing Code
+@mixin content-1 {
+    padding: 0px 30px 10px 6px;
+    margin: -31px 0px 0px 61px;
+    width: 50%;
+    height: auto;
+}
+
+// In Content-1, h1 tag Mixing Code
+@mixin content-1H1 {
+    font-size: clamp(1.6rem, 10vw, 2.8vw);    
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    margin: 0px 0px 16px 0px;
+}
+
+// In Content-1, p tag Mixing Code
+@mixin content-1P{
+    font-size: clamp(0.9rem, 10vw, 1.3vw);    
+    font-family: 'Open Sans', sans-serif;
+    color:  hsl(243, 87%, 12%);
+    line-height: 1.31;
+    margin: 0px 0px 16px 0px;
+}
+
+// In content-1, Top Email Mixing Code
+@mixin topEmail {
+    border: 1px solid black;
+    width: 52%;
+    padding: 15px 0px 10px 20px;
+    border-radius: 4px;
+    font-size: clamp(0.7rem, 10vw, 1.1vw);
+    color: lightgrey;
+}
+
+// In content-1, Top Button Mixing Code
+@mixin topBtn {
+    padding: 17px 70px 12px 70px;   
+    margin: 0px 0px 0px 12px;
+    color: white;
+    background: hsl(224, 93%, 58%);
+    text-align: center;
+    text-decoration: none;
+    font-size: clamp(0.85rem, 10vw, 1vw);
+    font-weight: 600;
+    border: 1px solid skyblue transparent;
+    outline: none;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    &:hover {
+        opacity: 0.7;
+    }
+
+    &:focus-visible{
+        opacity: 0.7;
+    }
+}
+
+// In ID file-flexcontianer, Image Box Mixing Code
+@mixin topImgbox {
+    width: 50%;
+    height: auto;
+    margin: 0px 10px 0px 0px;
+    img{
+        width: 100%;
+    }
+}
+
+// In ID Curved Section Mixing Code
+@mixin curved {
+    width: 100%;
+    background: url(../images/bg-curve-desktop.svg) no-repeat;
+    background-size: cover;
+    background-position: top center;
+    min-height: 12vh;
+}
+
+// In ID productive-container, Content-2 Mixing Code
+@mixin content-2 {
+    padding: 0px 0px 0px 0px;
+    width: 52%;
+    height: auto;
+}
+
+// In Content-2, h2 tag Mixing Code
+@mixin content-2H2 {
+    font-size: clamp(1rem, 1440px, 2.97vw);
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    margin: -15px 0px 32px 0px;
+}
+
+// In Content-2, p tag Mixing Code
+@mixin content-2P {
+    font-size: clamp(0.85rem, 10vw, 1.21vw);
+    font-family: 'Open Sans', sans-serif;
+    color:  hsl(243, 87%, 12%);
+    line-height: 1.5;
+    margin: 0px 140px 15px 0px;
+}
+
+// In Content-2, anchor tag Mixing 
+@mixin content-2An {
+    @include flex-box(row, flex-start, center);
+    font-size: clamp(0.85rem, 10vw, 1.21vw);
+    margin: 0px 0px 50px 0px;
+    padding: 0px 0px 5px 0px;
+    /* border-bottom:  2px solid  hsl(170, 45%, 43%);
+    width: 30%; */
+    text-decoration: none;
+    color: hsl(170, 45%, 43%);
+    &:hover{
+        opacity: 0.5;
+    }
+
+    &:focus-visible{
+        opacity: 0.7;
+    }
+    img{
+        margin: 0px 0px 0px 5px;
+    }
+}
+
+// In Content-2, Card Mixing Code
+@mixin card {
+    width: 390px;
+    height: auto;
+    padding: 30px 20px 35px 30px;
+    margin: 0px 0px 20px 0px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 2px 0px 11px rgba(0, 0, 0, 0.5);
+    img{
+        width: 5.5%;
+    }
+}
+
+// In Content-2, In Card P tag Mixing Code
+@mixin CardP {
+    font-size: clamp(0.8rem, 10vw, 1.05vw);
+    margin: 10px 0px 15px 0px;
+    line-height: 1.6;
+}
+
+
+// In ID productive-container, Image-Box Mixing Code
+@mixin ImgBox2 {
+    margin: 0px 0px 0px 0px;
+    width: 48%;
+    height: auto;
+    img{
+        width: 100%;
+        padding: 20px 25px 70px 70px;
+    }
+}
+
+// In ID access-today, Content-3 Mixing Code
+@mixin content-3 {
+    @include flex-box(column, flex-start, baseline);
+    width: 50%;
+    height: auto;
+    padding: 0px 80px 20px 0px;
+}
+
+// In Content-3, h4 tag Mixing Code
+@mixin content-3H4 {
+    font-size: clamp(1.15rem, 100vw, 2.31vw);
+    font-weight: 600;
+    color: white;
+    font-family: 'Raleway', sans-serif; ;
+    margin: 0px 0px 15px 0px;
+}
+
+// In Content-3, p tag Mixing Code
+@mixin content-3P {
+    font-size: clamp(0.89rem, 10vw, 1.29vw);
+    color: white;
+    opacity: 0.8;
+    line-height: 1.4;
+}
+
+// In ID access-tody, Id email-2  Mixing Code
+@mixin bottomEmail  {
+    border: 1px solid blue;
+    width: 100%;
+    padding: 15px 0px 10px 20px;
+    border-radius: 4px;
+    font-size: clamp(0.7rem, 10vw, 1.1vw);
+    color: lightgrey;
+    box-shadow: 2px 0px 11px rgba(0, 0, 0, 0.5);
+}
+// In class email, button Mixing Code
+@mixin bottomBtn {
+    padding: 15px 40px 15px 40px;
+    margin: 15px 0px 20px 0px;
+    color: white;
+    background: hsl(224, 93%, 58%);
+    text-align: center;
+    text-decoration: none;
+    font-size: clamp(0.75rem, 10vw, 1vw);
+    font-weight: 600;
+    border-radius: 5px;
+    outline: none;
+    border-radius: 5px;
+    box-shadow: 2px 0px 11px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+// Inner Footer tag Element, ID head Mixing Code
+@mixin footerHead {
+    width: 100%;
+    img{
+        filter:  brightness(0) invert(1);
+        width: 14.50%;
+        margin: 10px 0px 24px 35px;
+    }
+}
+
+// In ID footer-container, class contact Mixing Code
+@mixin contact-conatiner {
+    @include flex-box(row, center, center);
+    padding: 0px 0px 17px 0px;
+    a{
+        img{
+            padding: 0px 22px 0px 5px;
+        }
+    }
+    p{
+        font-size: 18px;
+        color: white;
+    }
+}
+
+// In class links, anchor tag Miixng Code 
+@mixin linkAn(){
+    color: white;
+    text-decoration: none;
+    padding: 0px 5px 17px 0px;
+    width: 100%;
+    font-size: 17px;
+    position: relative;
+    cursor: pointer;
+}

@@ -1,35 +1,28 @@
 // Google Fonts
 /* Headings, Call-to-actions, Header Navigation */
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
-/* font-family: 'Raleway', sans-serif; */
 
 /* Body */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
-/* font-family: 'Open Sans', sans-serif; */
 
 // Partials Files 
 @import "_cssreset";
+@import "_mixing";
 
-// Mixing Codes
-// Flex-Box Mixing Code
-@mixin flex-box($dir, $jc, $alI) {
-    display: flex;
-    flex-direction: $dir;
-    justify-content: $jc;
-    align-items: $alI;
-}
 
 /* Main CSS Code */
+/* Body Design CSS Code */
 body{
     @include flex-box(column, center, center);
     font-family: 'Open Sans', sans-serif; 
     font-size: 1rem;
 }
 
+/* Header tag Element Design CSS Code */
 header{
-    width: 100%;
     @include flex-box(row, space-between, center);
     padding: 70px 0px 72px 85px;
+    width: 100%;
 }
 
 #headerImg{
@@ -42,179 +35,107 @@ header{
     @include flex-box(row, flex-end, flex-start);
     width: 70%;
     a{
-        font-size: 18px; 
-        text-decoration: none;
-        color: hsl(238, 22%, 44%);
-        padding: 5px 20px 5px 40px;
-        font-weight: 600;
-        font-family: 'Raleway', sans-serif;
-        position: relative;
+        @include navListAnchor;
     }
 }
 
+/* In Main tag Element, Section tag Design CSS Code */
+
+/* ID- Files-FlexContainer Design CSS Code */
 #files-flexContainer{
     @include flex-box(row, space-around, center);
-    width: 100%;
     padding: 25px 17px 180px 16px;
+    width: 100%;
 }
 .content-1{
-    /* border: 1px solid black; */
     @include flex-box(column, space-between, space-between);
-    padding: 0px 30px 10px 6px;
-    margin: -31px 0px 0px 61px;
-    width: 50%;
-    height: auto;
+    @include content-1;
     h1{
-        font-size: clamp(1.6rem, 10vw, 2.8vw);    
-        font-family: 'Raleway', sans-serif;
-        font-weight: 700;
-        margin: 0px 0px 16px 0px;
+        @include content-1H1;
     }
     p{
-        font-size: clamp(0.9rem, 10vw, 1.3vw);    
-        font-family: 'Open Sans', sans-serif;
-        color:  hsl(243, 87%, 12%);
-        line-height: 1.31;
-        margin: 0px 0px 16px 0px;
+        @include content-1P;
     }
 }
-
 .email{
     padding: 12px 0px 15px 0px;
-    #email{
-        border: 1px solid black;
-        width: 52%;
-        padding: 15px 0px 10px 20px;
-        border-radius: 4px;
-        font-size: clamp(0.7rem, 10vw, 1.1vw);
-        color: lightgrey;
-    }
     a{  
-        padding: 17px 70px 12px 70px;   
-        margin: 0px 0px 0px 12px;
-        color: white;
-        background: hsl(224, 93%, 58%);
-        text-align: center;
-        text-decoration: none;
-        font-size: clamp(0.85rem, 10vw, 1vw);
-        font-weight: 600;
-        border: 1px solid skyblue transparent;
-        outline: none;
-        border-radius: 5px;
-        box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+        @include topBtn;
     }
+}
+#email{
+    @include topEmail;
 }
 
 .imgBox{
-    /* border: 1px solid black; */
-    width: 50%;
-    height: auto;
-    margin: 0px 10px 0px 0px;
-    img{
-        width: 100%;
-    }
+    @include topImgbox;
 }
 
+/* ID- Curved Design CSS Code */
 #curved{
-    width: 100%;
-    background: url(../images/bg-curve-desktop.svg) no-repeat;
-    background-size: cover;
-    background-position: top center;
-    min-height: 12vh;
+    @include curved;
 }
+
+/* ID- Productive-container Design CSS Code */
 #productive-container{
     @include flex-box(row, space-around, flex-start);
-    width: 100%;
     padding: 100px 0px 100px 82px;
     background: hsl(240, 75%, 98%);
+    width: 100%;
 }
 
 .content-2{
-    padding: 0px 0px 0px 0px;
-    width: 52%;
-    height: auto;
+    @include content-2;
     h2{
-        font-size: clamp(1rem, 1440px, 2.97vw);
-        font-family: 'Raleway', sans-serif;
-        font-weight: 700;
-        margin: -15px 0px 32px 0px;
-    }
-    .para{
-        font-size: clamp(0.85rem, 10vw, 1.21vw);
-        font-family: 'Open Sans', sans-serif;
-        color:  hsl(243, 87%, 12%);
-        line-height: 1.5;
-        margin: 0px 140px 15px 0px;
+        @include content-2H2;
     }
     a{
-        @include flex-box(row, flex-start, center);
-        font-size: clamp(0.85rem, 10vw, 1.21vw);
-        margin: 0px 0px 50px 0px;
-        padding: 0px 0px 5px 0px;
-        text-decoration: none;
-        color: hsl(170, 45%, 43%);
-        /* border-bottom: 2px solid hsl(170, 45%, 43%); */
-        /* width: 25.50%; */
-
-        img{
-            margin: 0px 0px 0px 5px;
-        }
+        @include content-2An;
     }
 }
+.para{
+    @include content-2P;
+}
 
+/* In Content-2, Card Design CSS Code */
 #card{
-    width: 390px;
-    height: auto;
-    padding: 30px 20px 35px 30px;
-    margin: 0px 0px 20px 0px;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 2px 0px 11px rgba(0, 0, 0, 0.5);
-    img{
-        width: 5.5%;
-    }
-    .fylop{
-        font-size: clamp(0.8rem, 10vw, 1.05vw);
-        margin: 10px 0px 15px 0px;
-        line-height: 1.6;
-    }
+    @include card;
+}
+.fylop{
+    @include CardP;
 }
 
+/* Inner Card Bottom Profile Design CSS Code */
 #profile{
-/*     border: 1px solid black; */
     @include flex-box(row, flex-start,center);
     img{
         width: 10%;
         border-radius: 100%;
     }
 }
+
+/* Inner Profile Design Details Class Design CSS Code */
 .details{
-    /* border: 1px solid black; */
     @include flex-box(column,flex-end,flex-start);
     padding: 0px 0px 0px 8px;
     position: relative;
     top: 0px;
-/*     right: 152px; */
     h3{
         font-size: 0.8rem;
         letter-spacing: 1.5px;
         font-weight: bold;
     }
-    .founder{
-        font-size: 10px;
-    }
+}
+
+.founder{
+    font-size: 10px;
 }
 
 .imgBox2{
-    margin: 0px 0px 0px 0px;
-    width: 48%;
-    height: auto;
-    img{
-        width: 100%;
-        padding: 20px 25px 70px 70px;
-    }
+    @include ImgBox2;
 }
 
+/* ID- access-today Design CSS Code */
 #access-today{
     @include flex-box(row, space-between, center);
     background :hsl(238, 22%, 44%);
@@ -223,50 +144,33 @@ header{
 }
 
 .content-3{
-    @include flex-box(column, flex-start, baseline);
-    width: 50%;
-    height: auto;
-    padding: 0px 80px 20px 0px;
+    @include content-3;
     h4{
-        font-size: clamp(1.15rem, 100vw, 2.31vw);
-        font-weight: 600;
-        color: white;
-        font-family: 'Raleway', sans-serif; ;
-        margin: 0px 0px 15px 0px;
+        @include content-3H4;
     }
     p{
-        font-size: clamp(0.89rem, 10vw, 1.29vw);
-        color: white;
-        opacity: 0.8;
-        line-height: 1.4;
+        @include content-3P;
     }
 }
 .email-2{
     width: 40%;
     @include flex-box(column, flex-start, flex-start);
-    #email-2{
-        border: 1px solid blue;
-        width: 100%;
-        padding: 15px 0px 10px 20px;
-        border-radius: 4px;
-        font-size: clamp(0.7rem, 10vw, 1.1vw);
-        color: lightgrey;
-        box-shadow: 2px 0px 11px rgba(0, 0, 0, 0.5);
-    }
     a{
-        padding: 15px 40px 15px 40px;
-        margin: 15px 0px 20px 0px;
-        color: white;
-        background: hsl(224, 93%, 58%);
-        text-align: center;
-        text-decoration: none;
-        font-size: clamp(0.75rem, 10vw, 1vw);
-        font-weight: 600;
-        border-radius: 5px;
-        box-shadow: 2px 0px 11px rgba(0, 0, 0, 0.5);
+        @include bottomBtn;
+        &:hover {
+            opacity: 0.7;
+        }
+
+        &:focus-visible{
+            opacity: 0.7;
+        }
     }
 }
+#email-2{
+    @include bottomEmail;
+}
 
+/* Footer Element Tag CSS Code */
 footer{
     width: 100%;
     @include flex-box(column, flex-start, flex-start);
@@ -274,76 +178,77 @@ footer{
     background: hsl(243, 87%, 12%);
 }
 
+/* ID Head Design CSS Code */
 #head{
-    width: 100%;
-    img{
-        filter:  brightness(0) invert(1);
-        width: 14.50%;
-        margin: 10px 0px 24px 35px;
-    }
+    @include footerHead;
 }
+
+/* ID Footer-Container Design CSS Code */
 #footer-container{
     width: 100%;
     @include flex-box(row, space-between, flex-start);
 }
-
+/* In ID Footer-Container, class contact Design CSS Code */
 .contact{
     @include flex-box(column, flex-start, flex-start);
     margin: 0px 0px 10px 35px;
 }
 
+/* Inner class Contact, .contact-Us design CSS Code */
 .contact-Us, .mail{
-    @include flex-box(row, center, center);
-    padding: 0px 0px 17px 0px;
-    a{
-        img{
-            padding: 0px 22px 0px 5px;
-        }
-    }
-    p{
-        font-size: 18px;
-        color: white;
-    }
+    @include contact-conatiner;
 }
 
+/* Inner ID Footer-Container, ID links design CSS Code */
 #links{
     @include flex-box(row, space-between, flex-start);
     position: relative;
     right: 40px;
 }
 
+/* Inner ID links, class Link-1 design CSS Code */
 .link-1{
-    @include flex-box(column, space-between, baseline);
+    @include  flex-box(column, space-between, baseline);
     a{
-        color: white;
-        text-decoration: none;
-        padding: 0px 5px 17px 0px;
-        font-size: 17px;
-        width: 100%;
-        position: relative;
+        @include linkAn;
         right: 115px;
+
+        &:hover{
+            opacity: 0.6;
+        }
+        &:focus-visible{
+            opacity: 0.7;
+        }
     }
 }
 
 .link-2{
     @include  flex-box(column, space-between, baseline);
     a{
-        color: white;
-        text-decoration: none;
-        padding: 0px 5px 17px 0px;
-        width: 100%;
-        font-size: 17px;
-        position: relative;
+        @include linkAn;
         left: 105px;
+
+        &:hover{
+            opacity: 0.6;
+        }
+        &:focus-visible{
+            opacity: 0.7;
+        }
     }
 }
 
+/* ID Social Container CSS Code */
 #social{
     @include flex-box(row, space-around, center);
     position: relative;
     right: 150px;
     a{
         padding: 5px 10px 5px 5px;
+        cursor: pointer;
+        &:hover{
+            opacity: 0.5;
+            filter: #999;
+        }
         img{
             filter:  brightness(0) invert(1);
             width: 40px;
@@ -351,6 +256,7 @@ footer{
     }
 }
 
+/* Responive CSS Code ( max-width: 1392px )*/
 @media screen and (max-width: 1392px) {
     header{
         padding: 60px 20px 60px 80px;
@@ -371,16 +277,16 @@ footer{
     .email{
         @include flex-box(column, flex-start, flex-start);
         transition: 0.3s;
-        #email{
-            margin: 0px 0px 10px 0px;
-            transition: 0.3s;
-            width: 100%;
-        }
         a{
             align-self: flex-start;
             margin: 10px 0px 15px 0px;
             width: 100%;
         }
+    }
+    #email{
+        margin: 0px 0px 10px 0px;
+        transition: 0.3s;
+        width: 100%;
     }
     footer{
         padding: 50px 10px 50px 25px;
@@ -430,6 +336,7 @@ footer{
     }
 }
 
+/* Responive CSS Code ( max-width: 1065px )*/
 @media all and (max-width: 1065px) {
     header{
         padding: 50px 18px 50px 18px;
@@ -444,13 +351,11 @@ footer{
         transition: 0.3s;
     }
     .content-1{
-        /* border: 1px solid black; */
         @include flex-box(column, center, center);
         width: 100%;
         margin: 25px auto;
 
         h1{
-            /* border: 1px solid black; */
             margin: 5px 0px 5px 20px;
             text-align: center;
             width: 100%;
@@ -458,7 +363,6 @@ footer{
         p{
             padding: 10px 20px 10px 20px;
             margin: 5px 0px 5px 20px;
-            /* border: 1px solid black; */
             text-align: center;
             width: 100%;
         }
@@ -467,15 +371,14 @@ footer{
         @include flex-box(column, center, center);
         padding: 10px 20px 10px 20px;
         margin: 0px 0px 0px 20px;
-        /* border: 1px solid black; */
         width: 100%;
-        #email{
-            width: 100%;
-        }
         a{
             margin: 10px auto;
             width: 100%; 
         }
+    }
+    #email{
+        width: 100%;
     }
     .imgBox{
         width: 100%;
@@ -498,21 +401,19 @@ footer{
         margin: 25px 0px 0px 0px;
         padding: 20px 20px 50px 20px;
         h2{
-            /* border: 1px solid black; */
             text-align: center;
             margin: 10px auto;
             width: 100%;
         }
-        .para{
-            /* border: 1px solid black; */
-            margin: 10px 0px -10px 0px; 
-            width: 100%;
-            padding: 5px 20px 10px 0px;
-            text-align: center;
-        }
         a{
             margin: 30px 0px 30px 0px;
         }
+    }
+    .para{
+        margin: 10px 0px -10px 0px; 
+        width: 100%;
+        padding: 5px 20px 10px 0px;
+        text-align: center;
     }
     .imgBox2{
         width: 100%;
@@ -550,22 +451,21 @@ footer{
         }
     }
     .email-2{
-        /* border: 1px solid black; */
         width: 100%;
         padding: 0px 40px 10px 40px;
-
-        #email-2{
-            margin: 15px auto;
-            padding: 10px 10px 10px 10px;
-            width: 100%;
-        }
         a{
             margin: 0px auto;
             padding: 10px 10px 10px 10px;
             width: 100%;
         }
     }
+    #email-2{
+        margin: 15px auto;
+        padding: 10px 10px 10px 10px;
+        width: 100%;
+    }
 }
+/* Responive CSS Code ( max-width: 707px )*/
 @media all and (max-width: 707px) {
     #head{
         img{
@@ -586,6 +486,8 @@ footer{
         }
     }
 }
+
+/* Responive CSS Code ( max-width: 671px )*/
 @media screen and (max-width: 671px) {
     #navList{
         a{
@@ -595,6 +497,7 @@ footer{
         }
     }
 }
+/* Responive CSS Code ( max-width: 555px )*/
 @media all and (max-width: 555px){
     header{
         padding-top: 20px;
@@ -605,22 +508,18 @@ footer{
             transition: 0.4s;
         }
     }
-    .content-2{
-        .para{
-            text-align: left;
-            transition: 0.3s;
-        }
+    .para{
+        text-align: left;
+        transition: 0.3s;
     }
 }
+/* Responive CSS Code ( max-width: 435px )*/
 @media all and (max-width: 435px) {
     #card{
         width: 100%;
         transform: scale(0.9);
         transition: 0.4s;
     }
-/*     .details{
-        transition: 0.4s
-    } */
     #curved{
         width: 100%;
         background: url(../images/bg-curve-mobile.svg) no-repeat;
